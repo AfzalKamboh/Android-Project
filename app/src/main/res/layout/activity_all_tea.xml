@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#65a86c"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+    <TextView
+        android:id="@+id/tvAllTeaTitle"
+        android:text="Black Tea"
+        android:textSize="40dp"
+        android:textColor="#ebfbe4"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <TextView
+        android:id="@+id/tvSubTitle"
+        android:textColor="#ebfbe4"
+        android:textSize="18dp"
+        android:layout_below="@+id/tvAllTeaTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp"
+        android:text="\u2022All items" />
+    <TextView
+        android:id="@+id/tvSubTitle2"
+        android:textColor="#ebfbe4"
+        android:textSize="18dp"
+        android:text="currently in store"
+        android:layout_below="@+id/tvSubTitle"
+        android:layout_marginBottom="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp"
+        />
+
+    <RelativeLayout
+        android:background="@drawable/card_shape"
+        android:layout_below="@+id/tvSubTitle2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/allTeaRecycler"
+        android:paddingTop="50dp"
+        android:layout_width="330dp"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        />
+    </RelativeLayout>
+
+</RelativeLayout>

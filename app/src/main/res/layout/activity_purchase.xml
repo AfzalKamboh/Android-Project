@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#65a86c"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+    <TextView
+        android:id="@+id/tvPayTitle"
+        android:text="Payment"
+        android:textSize="40dp"
+        android:textColor="#ebfbe4"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <TextView
+        android:id="@+id/tvOption"
+        android:textColor="#ebfbe4"
+        android:textSize="18dp"
+        android:layout_below="@+id/tvPayTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="10dp"
+        android:text="\u2022 Select an option " />
+
+
+    <RelativeLayout
+
+        android:background="@drawable/card_shape"
+        android:layout_below="@+id/tvOption"
+        android:layout_above="@+id/cargoDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/relCard"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/payPalCard"
+            app:cardBackgroundColor="#EFFEE8"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="40dp"
+            android:layout_width="160dp"
+            android:layout_height="110dp"
+            >
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="60dp"
+                android:src="@drawable/paypal"
+                />
+            <TextView
+                android:text="PayPal"
+                android:textColor="@color/dark_green"
+                android:textSize="20dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginLeft="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                app:cardBackgroundColor="#65AC04"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="40dp"
+                android:layout_toRightOf="@+id/payPalCard"
+                android:layout_width="160dp"
+                android:layout_height="110dp"
+                >
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="60dp"
+                    android:src="@drawable/credit"
+                    />
+                <TextView
+                    android:text="Credit Card"
+                    android:textColor="@color/white_text_color"
+                    android:textSize="20dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginLeft="33dp"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_below="@+id/relCard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp">
+
+            <EditText
+                android:id="@+id/edHolder"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/edittext_shape"
+                android:hint="Name"
+                android:paddingHorizontal="20dp"
+                android:textSize="21dp" />
+
+            <EditText
+                android:id="@+id/edtCardNum"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/edHolder"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/edittext_shape"
+                android:hint="111 222 333 444"
+                android:paddingHorizontal="20dp"
+                android:inputType="textPassword"
+                android:textSize="21dp" />
+
+            <EditText
+                android:id="@+id/edtDate"
+                android:layout_width="140dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/edtCardNum"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/edittext_shape"
+                android:hint="MM/YY"
+                android:inputType="textPassword"
+                android:paddingHorizontal="20dp"
+                android:textSize="21dp" />
+            <EditText
+                android:id="@+id/edtCVV"
+                android:layout_width="140dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/edtCardNum"
+                android:layout_toRightOf="@+id/edtDate"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/edittext_shape"
+                android:hint="MM/YY"
+                android:paddingHorizontal="20dp"
+                android:inputType="textPassword"
+                android:textSize="21dp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <LinearLayout
+        android:id="@+id/cargoDetails"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+        <TextView
+            android:id="@+id/txtTotal"
+            android:textColor="@color/dark_green"
+            android:text="Total: "
+            android:textSize="22dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:id="@+id/tvTotalPrice"
+            android:text="$44"
+            android:textSize="30dp"
+            android:textColor="@color/dark_green"
+
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="45dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <Button
+            android:id="@+id/btnContPurchase"
+            android:text="Continue"
+            android:textColor="@color/white_text_color"
+            android:background="@drawable/round_dark_green_btn"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="14dp"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:onClick="contPurchase"
+            />
+    </LinearLayout>
+</RelativeLayout>

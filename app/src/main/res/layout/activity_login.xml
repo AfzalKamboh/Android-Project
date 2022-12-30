@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#65a86c"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+    <TextView
+        android:id="@+id/tvLogin"
+        android:text="Login"
+        android:textSize="40dp"
+        android:textColor="#ebfbe4"
+        android:layout_marginBottom="70dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tvLogin"
+        android:background="@drawable/card_shape">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp">
+
+            <EditText
+                android:id="@+id/edtUser"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/edittext_shape"
+                android:hint="Username"
+                android:paddingHorizontal="20dp"
+                android:textSize="21dp" />
+
+            <EditText
+                android:id="@+id/edtPass"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/edtUser"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/edittext_shape"
+                android:hint="Password"
+                android:paddingHorizontal="20dp"
+                android:inputType="textPassword"
+                android:textSize="21dp" />
+
+            <TextView
+                android:id="@+id/forgot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtPass"
+                android:layout_alignEnd="@+id/edtPass"
+                android:layout_marginTop="8dp"
+                android:text="Forgot your password?"
+                android:textColor="#646c60" />
+
+            <Button
+                android:id="@+id/login"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/forgot"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/round_light_green_btn"
+                android:textColor="@color/white_text_color"
+                android:onClick="login"
+                android:text="Login in" />
+
+            <Button
+                android:id="@+id/googleBtn"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/login"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/continue_with_btn"
+                android:text="Continue with google" />
+
+            <Button
+                android:id="@+id/facebookBtn"
+                android:text="Continue with facebook"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/continue_with_btn"
+                android:layout_below="@+id/googleBtn"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="30dp"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
